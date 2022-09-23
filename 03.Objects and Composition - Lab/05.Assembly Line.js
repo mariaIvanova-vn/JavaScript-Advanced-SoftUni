@@ -13,12 +13,12 @@ function createAssemblyLine() {
             };
         },
         hasAudio(car) {
-car.currentTrack ={},
-            car.nowPlaying = function () {
-                if (this.currentTrack !== null && this.currentTrack !== undefined) {
-                    console.log(`Now playing '${this.currentTrack.name}' by ${this.currentTrack.artist}`)
-                }
-            };
+            car.currentTrack = {},
+                car.nowPlaying = function () {
+                    if (this.currentTrack !== null && this.currentTrack !== undefined) {
+                        console.log(`Now playing '${this.currentTrack.name}' by ${this.currentTrack.artist}`)
+                    }
+                };
 
         },
         hasParktronic(car) {
