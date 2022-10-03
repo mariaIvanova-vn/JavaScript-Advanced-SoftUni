@@ -2,24 +2,27 @@ function solve() {
    document.querySelector('#btnSend').addEventListener('click', onClick);
 
    function onClick() {
+
       let input = JSON.parse(document.querySelector('#inputs textarea').value);
       let allRestaurants = {};
-      let bestAvgSalary = 0;
+      let bestAverageSalary = 0;
       let bestRestaurantName = '';
 
-      for (let data of input) {
-         let [restaurantName, workers] = data.split(' - ');
-         let worker = workers.split(', ');
+      for (let line of input) {
 
-         for (let w of worker) {
-            let [name, salary] = w.split(' ');
+         let [restaurantName, workers] = line.split(' - ');
+         let individualWorkers = workers.split(', ');
+
+         for (let worker of individualWorkers) {
+            let [workerName, salary] = worker.split(' ');
 
             if (!allRestaurants.hasOwnProperty(restaurantName)) {
                allRestaurants[restaurantName] = {};
             }
-            allRestaurants[restaurantName][name] = Number(salary);
+            allRestaurants[restaurantName][workerName] = Number(salary);
             console.log(allRestaurants);
          }
+
          let entries = Object.entries(allRestaurants);
 
          for (let [name, workers] of entries) {
@@ -32,12 +35,13 @@ function solve() {
 
             let averageSalary = totalSalariesPaid / salaries.length;
 
-            if (averageSalary > bestAvgSalary) {
-               bestAvgSalary = averageSalary;
+            if (averageSalary > bestAverageSalary) {
+               bestAverageSalary = averageSalary;
                bestRestaurantName = name;
             }
          }
       }
+
       let workersOrdered = Object.entries(allRestaurants[bestRestaurantName]).sort((a, b) => b[1] - a[1]);
       let workersAsString = '';
       workersOrdered.forEach(w => workersAsString += `Name: ${w[0]} With Salary: ${w[1]} `);
