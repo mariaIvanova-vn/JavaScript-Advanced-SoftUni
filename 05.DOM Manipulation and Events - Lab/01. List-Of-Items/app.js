@@ -1,5 +1,5 @@
 function addItem() {
-    console.log('TODO:...');
+    //console.log('TODO:...');
     let list=document.getElementById('items');
 
     let input = document.getElementById('newItemText');
