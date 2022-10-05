@@ -5,7 +5,7 @@ function addItem() {
     let listItem = document.createElement('li');
     listItem.textContent = inputElement.value;
 
-    let linkElement = document.createElement('button');
+    let linkElement = document.createElement('a');
     linkElement.href = '#';
     linkElement.textContent = '[Delete]';
 
