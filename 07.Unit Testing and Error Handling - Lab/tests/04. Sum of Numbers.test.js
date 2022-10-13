@@ -10,7 +10,4 @@ describe('Sum of Numbers', () => {
         expect(sum([1,1])).not.be.equal(7).false;
     });
 
-    it('should return false, if input is not an array', () => {
-        expect(sum('')).is.not.Arguments(Array);
-    });
 })
