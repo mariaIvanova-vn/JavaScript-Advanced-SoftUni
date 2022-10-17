@@ -1,4 +1,4 @@
-function solve() { 
+function solve() {
     return {
         extend(template) {
             for (key in template) {
@@ -10,10 +10,10 @@ function solve() {
             }
         }
     }
-} 
-    const myObj = solve(); 
-    const template = { 
-        extensionMethod: function () {}, 
-        extensionProperty: 'someString' 
-      } 
-      myObj.extend(template);
+}
+let myObj = solve();
+let template = {
+    extensionMethod: function () { },
+    extensionProperty: 'someString'
+}
+myObj.extend(template);
