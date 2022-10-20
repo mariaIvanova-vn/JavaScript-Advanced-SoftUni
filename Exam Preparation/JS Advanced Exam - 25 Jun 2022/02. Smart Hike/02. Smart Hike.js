@@ -48,7 +48,7 @@ class SmartHike {
 
     showRecord(criteria) {
         if (this.listOfHikes.length == 0) {
-            return `${username} has not done any hiking yet`;
+            return `${this.username} has not done any hiking yet`;
         }
 
         if (criteria == "hard" || criteria == "easy") {
@@ -65,7 +65,7 @@ class SmartHike {
             return `${this.username}'s best ${criteria} hike is ${bestHike.peak} peak, for ${bestHike.time} hours`;
         } else {
             let output = ["All hiking records:"];
-            this.listOfHikes.forEach((hike) => { result.push(`${this.username} hiked ${hike.peak} for ${hike.time} hours`) });
+            this.listOfHikes.forEach((hike) => { output.push(`${this.username} hiked ${hike.peak} for ${hike.time} hours`) });
             return output.join('\n');
         }
     }
