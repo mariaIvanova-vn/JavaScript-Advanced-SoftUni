@@ -61,21 +61,12 @@ class VegetableStore {
     }
 
     revision() {
-        
-        const secondRow = this.availableProducts.sort((a, b) => a.price - b.price)
-        .map(v => (`${v.type}-${v.quantity}-$${v.price}`));
+        let output = ["Available vegetables:"];
+        this.availableProducts.sort((a, b) => a.price - b.price)
+            .map(v => output.push(`${v.type}-${v.quantity}-$${v.price}`));
+        output.push(`The owner of the store is ${this.owner}, and the location is ${this.location}.`);
 
-        return [
-            "Available vegetables:",
-            secondRow,
-            `The owner of the store is ${this.owner}, and the location is ${this.location}.`,
-        ].join('\n');
+        return output.join('\n');
     }
 }
 
-let output = ["Available vegetables:"];
-this.availableProducts.sort((a, b) => a.price - b.price)
-    .map(v => output.push(`${v.type}-${v.quantity}-$${v.price}`));
-output.push(`The owner of the store is ${this.owner}, and the location is ${this.location}.`);
-
-return output.join('\n');
