@@ -1,4 +1,4 @@
-window.addEventListener('load', solve);
+window.addEventListener('load', solve);   //100/100
 
 function solve() {
 

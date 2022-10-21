@@ -1,7 +1,7 @@
-window.addEventListener("load", solve);
+window.addEventListener("load", solve);    // 92/100
 
 function solve() {
-  let totalProfit=0;
+  let totalProfit = 0;
 
   const input = {
     make: document.getElementById('make'),
@@ -27,7 +27,7 @@ function solve() {
     let originalCost = input.originalCost.value;
     let sellingPrice = input.sellingPrice.value;
 
-    if (make == '' || model == '' || year == '' || fuelType == '' || originalCost == '' || sellingPrice == '' || originalCost>sellingPrice) {
+    if (make == '' || model == '' || year == '' || fuelType == '' || originalCost == '' || sellingPrice == '' || originalCost > sellingPrice) {
       return;
     }
 
@@ -46,15 +46,15 @@ function solve() {
       <button class="action-btn sell">Sell</button>
     </td>`
 
-  
+
     tableBody.appendChild(tr);
-    
-        input.make.value = '';
-        input.model.value = '';
-        input.year.value = '';
-        input.fuelType.value = '';
-        input.originalCost.value = '';
-        input.sellingPrice.value = '';
+
+    input.make.value = '';
+    input.model.value = '';
+    input.year.value = '';
+    input.fuelType.value = '';
+    input.originalCost.value = '';
+    input.sellingPrice.value = '';
 
     const editBtn = tr.querySelector('.edit');
     editBtn.addEventListener('click', () => {
@@ -70,11 +70,11 @@ function solve() {
     const sellBtn = tr.querySelector('.sell');
     sellBtn.addEventListener('click', () => {
       tableBody.remove();
-      
+
       editBtn.remove();
       sellBtn.remove();
 
-      let currProfit=sellingPrice-originalCost;
+      let currProfit = sellingPrice - originalCost;
 
       let li = document.createElement('li');
       li.className = 'each-list';
@@ -83,11 +83,11 @@ function solve() {
       <span>${currProfit}</span>`
 
       carsList.appendChild(li);
-      totalProfit+=currProfit;
+      totalProfit += currProfit;
 
       profit.textContent = totalProfit.toFixed(2);
       profit.style.fontWeight = "strong";
     })
-    
+
   });
 }
