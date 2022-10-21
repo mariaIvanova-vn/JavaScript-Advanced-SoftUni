@@ -1,4 +1,4 @@
-function solve() {
+function solve() {                         //60/100
     const input = {
         firstName: document.getElementById('fname'),
         lastName: document.getElementById('lname'),
@@ -54,12 +54,15 @@ function solve() {
 
 
         totalSum += salary;
-        sum.textContent = totalSum.toFixed(2);
+        
 
 
         const firedBtn = tr.querySelector('.fired');
         firedBtn.addEventListener('click', () => {
-
+            tableBody.remove();
+            editBtn.remove();
+            firedBtn.remove();
+            total-=salary; 
         })
 
         const editBtn = tr.querySelector('.edit');
@@ -72,5 +75,7 @@ function solve() {
             input.salary.value = salary;
             tr.remove();
         })
+
+        sum.textContent = totalSum.toFixed(2);
     })
 }
