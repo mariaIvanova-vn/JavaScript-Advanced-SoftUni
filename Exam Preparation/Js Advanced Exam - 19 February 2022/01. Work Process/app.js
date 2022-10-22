@@ -29,8 +29,8 @@ function solve() {                         //60/100
         }
 
         let tr = document.createElement('tr');
-        tr.className = "row";
-        tr.innerHTML = `<tr>
+      //  tr.className = "tbl-content";
+        tr.innerText = `<tr>
         <td>${firstName}</td>
         <td>${lastName}</td>
         <td>${email}</td>
@@ -44,6 +44,7 @@ function solve() {                         //60/100
         </tr>`
 
         tableBody.appendChild(tr);
+
 
         input.firstName.value = '';
         input.lastName.value = '';
