@@ -29,3 +29,12 @@
 - **07.Unit Testing and Error Handling - Exercise** ([https://github.com/mariaIvanova-vn/JavaScript-Advanced-SoftUni/tree/main/07.Unit%20Testing%20and%20Error%20Handling%20-%20Exercise])
 
 - **07.Unit Testing and Error Handling - Lab** ([https://github.com/mariaIvanova-vn/JavaScript-Advanced-SoftUni/tree/main/07.Unit%20Testing%20and%20Error%20Handling%20-%20Lab])
+
+- **08.Classes and Attributes - Exercise** ([https://github.com/mariaIvanova-vn/JavaScript-Advanced-SoftUni/tree/main/08.Classes%20and%20Attributes%20-%20Exercise])
+
+- **08.Classes and Attributes - Lab** ([https://github.com/mariaIvanova-vn/JavaScript-Advanced-SoftUni/tree/main/08.Classes%20and%20Attributes%20-%20Lab])
+
+- **09.Prototypes and Inheritance - Exercise** ([https://github.com/mariaIvanova-vn/JavaScript-Advanced-SoftUni/tree/main/09.Prototypes%20and%20Inheritance%20-%20Exercise])
+
+- **JavaScript-Advanced-Exam-Preparation** ([https://github.com/mariaIvanova-vn/JavaScript-Advanced-SoftUni/tree/main/Exam%20Preparation])
+
